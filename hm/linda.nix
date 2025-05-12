@@ -136,7 +136,6 @@
     kate
     distrobox
     telegram-desktop
-    virtualbox
     discord
     ghostwriter
     python312Packages.notebook
