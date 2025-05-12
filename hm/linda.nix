@@ -80,6 +80,8 @@
     };
     # GitHub CLI
     gh.enable = true;
+    # LazyGit
+    lazygit.enable = true;
     # GnuPG
     gpg.enable = true;
     # SSH
