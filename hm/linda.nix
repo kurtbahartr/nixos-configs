@@ -37,6 +37,7 @@
     ".local/share/fonts/Wingdings.ttf".source = ./fonts/Wingdings.ttf;
     ".local/share/fonts/Wingdings_2.ttf".source = ./fonts/Wingdings_2.ttf;
     ".local/share/fonts/Wingdings_3.ttf".source = ./fonts/Wingdings_3.ttf;
+    ".wallpaper".source = ./wallpaper.jpg;
   };
 
   # Home Manager can also manage your environment variables through
@@ -61,6 +62,12 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  home.activation = {
+    setPlasmaWallpaper = ''
+      ${pkgs.kdePackages.plasma-workspace}/bin/plasma-apply-wallpaperimage ${config.home.homeDirectory}/.wallpaper
+    '';
+  };
 
   programs = {
     # Git
