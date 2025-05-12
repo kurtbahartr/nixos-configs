@@ -19,6 +19,21 @@
         # Import the previous configuration.nix we used,
         # so the old configuration file still takes effect
         ./configuration.nix
+        ./hardware-configuration.nix
+        ./lib/bootloader.nix
+        ./lib/cups.nix
+        ./lib/flatpak.nix
+        ./lib/gui.nix
+        ./lib/locale.nix
+        ./lib/networking.nix
+        ./lib/nvidia.nix
+        ./lib/programs.nix
+        ./lib/ssh.nix
+        ./lib/tailscale.nix
+        ./lib/users.nix
+        ./lib/virtualisation.nix
+        ./lib/zapret.nix
+        ./lunarshell/install.nix
       ];
     };
   };
