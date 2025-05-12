@@ -1,5 +1,5 @@
 # Used in main configuration file. Used to enable NVIDIA Drivers. Includes OPTIMUS for my laptop.
-{ config, lib, pkgs, ... }:
+{ config, ... }:
 
 {
 

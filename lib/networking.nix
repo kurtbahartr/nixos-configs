@@ -1,4 +1,3 @@
-{ config, pkgs, ... }:
 {
   networking.hostName = "st-denis-g770"; # Define your hostname.
   networking.nameservers = [ "149.112.121.10#private.canadianshield.cira.ca" "149.112.122.10#private.canadianshield.cira.ca" "2620:10A:80BB::10#private.canadianshield.cira.ca" "2620:10A:80BC::10#private.canadianshield.cira.ca" ];

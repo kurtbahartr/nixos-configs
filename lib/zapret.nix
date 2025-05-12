@@ -1,4 +1,3 @@
-{ config, pkgs, ... }:
 {
   # Zapret!
   services.zapret = {
