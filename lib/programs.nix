@@ -54,6 +54,7 @@
     exfat
     gh
     vscode
+    direnv
     ### START LunarShell deps ###
     figlet
     jq
