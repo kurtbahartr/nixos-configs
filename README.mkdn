@@ -49,6 +49,7 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 - OpenSSH Daemon
 - Git LFS
 - Tailscale
+- Visual Studio Code
 - `odin4` (`1.2.1.dc05e3ea0` installed through local nixpkg definition, the source is fetched from XDA.)
 
 # Installed system-wide dots

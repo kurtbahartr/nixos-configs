@@ -174,6 +174,7 @@
     inputs.zen-browser.packages.${pkgs.system}.default
     exfat
     gh
+    vscode
     ### START LunarShell deps ###
     figlet
     jq
