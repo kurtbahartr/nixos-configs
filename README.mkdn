@@ -1,0 +1,103 @@
+# NixOS Configs
+
+Configuration files for NixOS. This isn't a part of [linux-configs](https://github.com/kurtbahartr/linux-configs) family because it's configured the Nix way.
+
+# Target workflow
+
+- Sane internet browsing
+- Gap-bridged Office experience (to make it easier to migrate from Microsoft 365 suite)
+- Python programming with Qt
+- Revamped terminal shell (feat. [LunarShell](https://lunarshell.dev)+zsh)
+
+# Full list of included/enabled packages/services
+
+- Base KDE install by NixOS's Calamares
+- `systemd-resolved`
+- Flatpak (`v0.6.0` installed through [gmodena's Flake](https://github.com/gmodena/nix-flatpak))
+- Cider (Flatpak)
+- Distrobox
+- WayDroid
+- Bluetooth
+- `zsh`
+- Steam
+- Git
+- `efibootmgr`
+- Telegram Desktop
+- Helix
+- `tmate`
+- VirtualBox
+- Discord
+- HyFetch
+- `fastfetch`
+- WPS Office
+- ghostwriter
+- `android-tools` (includes ADB and `fastboot`)
+- Python 3.12
+- Jupyter Notebook (installed through Python 3.12)
+- Prism Launcher
+- PyQt5 for Python 3.12
+- Qt 5 tools (includes Qt Widgets Designer, to be invoked from terminal with `designer`)
+- Spyder (installed through Python 3.12)
+- Wine
+- Winetricks
+- Zen Browser (`.default` profile installed through [youwen5's Flake](https://github.com/youwen5/zen-browser-flake))
+- `exfat` (includes tools to work with ExFAT partitions)
+- Package dependencies for [LunarShell](https://lunarshell.dev)
+- Noto Fonts (main, CJK and emoji)
+- Nerd Fonts
+- Zapret
+- OpenSSH Daemon
+- `odin4` (`1.2.1.dc05e3ea0` installed through local nixpkg definition, the source is fetched from XDA.)
+
+# Installed system-wide dots
+
+- Base system configuration for `en_US` locale.
+- LunarShell
+- Parameters for Zapret (configured for Turkcell Superonline, Turk Telekom home networks and eduroam at Samsun University)
+
+# Pre-install steps
+
+- Modify the configs to reflect your hostname.
+- Modify `nvidia.nix` to reflect your PC's PCI Bus addresses.
+- Review the packages and configs. Not everyone is content with my preferences.
+- Place Cider flatpak into the `cider/` directory if you're going to install it. Otherwise, comment out the relevant `flatpak install` section.
+
+# Installation
+
+- Copy the files to `/etc/nixos`.
+- `sudo nixos-rebuild switch`
+- Reboot.
+
+# Post-install steps
+
+- Set up distrobox with an Ubuntu container and install Bifrost (search for SamloaderKotlin) into it if you're willing to work with Samsung firmwares.
+- Set up Zen Browser and install the following extensions for a saner and cleaner Internet experience:
+  - Bring Twitter Back
+  - Proton Pass (also sign into it)
+  - uBlock Origin
+- Also import the Zen Mods from this repository. This will install:
+  - Add new tab urlbar icon v1.0.0
+  - Better CtrlTab Panel v1.0.0
+  - Better Spacing v1.0.0
+  - Bleeding Corners Fix v1.0.0
+  - Customized Popup v1.0.0
+  - Load Bar v1.0.0
+  - Tab Preview Enhanced v1.1.0
+  - Trackpad Animation v1.2.0
+- Once done, toggle the following settings in Zen Settings:
+  - General
+    - Tabs
+      - Ctrl+Tab cycles through tabs in recently used order = On
+  - Look and Feel
+    - Vertical Tabs
+      - Show New Tab Button on Tab List = On
+        - Show separation border for when the new tab button is at the bottom = On
+        - Move the new tab button to the top = Off
+- `gh auth login` if you use GitHub.
+- Pair your Android device through wireless debugging using `adb pair` if you're willing to use USB/wireless debugging.
+- Set up WayDroid and install Inat BOX into it if you're willing to do so. Search for the APK yourself.
+
+# Bugs
+
+- Connecting to external display disconnects the built-in display on modern Nvidia laptops. The solution is logging out and logging back in.
+- WPS Office reports missing fonts. The reported missing fonts are unavailable on nixpkgs repository. You need to find those fonts and perform user-specific installs.
