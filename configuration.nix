@@ -200,12 +200,19 @@
     "profile.d/lunar-env.sh".source = ./lunarshell/lunar-env.sh;
   };
 
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-emoji
-    nerdfonts
-  ];
+  fonts = {
+    fontconfig = {
+      enable = true;
+      useEmbeddedBitmaps = true;
+    };
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-emoji
+      nerdfonts
+    ];
+  };
 
   # Zapret!
   services.zapret.enable = true;
