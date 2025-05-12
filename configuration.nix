@@ -144,6 +144,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     git
+    git-lfs
     efibootmgr
     telegram-desktop
     helix
