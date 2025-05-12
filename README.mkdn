@@ -47,6 +47,8 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 - Nerd Fonts
 - Zapret
 - OpenSSH Daemon
+- Git LFS
+- Tailscale
 - `odin4` (`1.2.1.dc05e3ea0` installed through local nixpkg definition, the source is fetched from XDA.)
 
 # Installed system-wide dots
@@ -96,6 +98,10 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 - `gh auth login` if you use GitHub.
 - Pair your Android device through wireless debugging using `adb pair` if you're willing to use USB/wireless debugging.
 - Set up WayDroid and install Inat BOX into it if you're willing to do so. Search for the APK yourself.
+- Visit https://login.tailscale.com/admin/machines/new-linux and generate an install script. Then copy the `sudo tailscale up --auth-key=<key>` part and paste it into your terminal.
+- If your Tailnet has subnet servers, do the following commands:
+  - `sudo tailscale up --accept-routes`
+  - `sudo tailscale set --accept-routes`
 
 # Bugs
 
