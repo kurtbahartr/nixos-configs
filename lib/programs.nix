@@ -28,31 +28,16 @@
   # $ nix search wget
   # TODO: Migrate some of these to users.users.linda.packages
   environment.systemPackages = with pkgs; [
-    git
-    git-lfs
     efibootmgr
-    telegram-desktop
-    helix
-    tmate
-    virtualbox
-    discord
-    hyfetch
     fastfetch
     wpsoffice
-    distrobox
-    ghostwriter
     android-tools
     python312Full
-    python312Packages.notebook
     prismlauncher
-    python312Packages.pyqt5
-    libsForQt5.qt5.qttools
-    python312Packages.spyder
     wine
     winetricks
     inputs.zen-browser.packages.${pkgs.system}.default
     exfat
-    gh
     vscode
     direnv
     ### START LunarShell deps ###
