@@ -77,6 +77,12 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Enable Tailscale
+  services.tailscale = {
+    enable = true;
+    useRoutingFeatures = "client";
+  };
+
   # Distrobox
   virtualisation.podman = {
     enable = true;
