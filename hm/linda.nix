@@ -31,6 +31,10 @@
     ".zshrc".text = ''
       # Created by newuser for 5.9
     '';
+    ".gitconfig".text = ''
+      [core]
+      editor = "hx"
+    '';
     ".local/share/fonts/mtextra.ttf".source = ./fonts/mtextra.ttf;
     ".local/share/fonts/symbol.ttf".source = ./fonts/symbol.ttf;
     ".local/share/fonts/Webdings_Regular.ttf".source = ./fonts/Webdings_Regular.ttf;
