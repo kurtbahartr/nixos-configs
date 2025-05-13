@@ -40,6 +40,11 @@
     protonvpn-gui
     wine
     winetricks
+    # To provide ntlm_auth to Wine.
+    # We won't be hosting an SMB share nor will we access one.
+    # Refer to the relevant NixOS Wiki page if you want to host/access
+    # SMB shares as well and remove the entry from here.
+    samba
     inputs.zen-browser.packages.${pkgs.system}.default
     exfat
     vscode
