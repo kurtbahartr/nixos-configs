@@ -15,6 +15,9 @@
 
     # Install KDE Connect
     kdeconnect.enable = true;
+
+    # Install KDE Partition Manager
+    partition-manager.enable = true;
   };
 
   fonts = {
