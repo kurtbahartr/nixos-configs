@@ -34,6 +34,7 @@
     android-tools
     python312Full
     prismlauncher
+    protonvpn-gui
     wine
     winetricks
     inputs.zen-browser.packages.${pkgs.system}.default
