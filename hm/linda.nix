@@ -148,6 +148,7 @@
     distrobox
     telegram-desktop
     discord
+    spotify
     ghostwriter
     python312Packages.notebook
     python312Packages.pyqt5
