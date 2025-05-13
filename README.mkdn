@@ -59,4 +59,4 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 
 # Bugs
 
-- Connecting to external display disconnects the built-in display on modern Nvidia laptops. The solution is logging out and logging back in.
+- Connecting to external display disconnects the built-in display on modern Nvidia laptops. The solution is logging out and logging back in while the display is connected.
