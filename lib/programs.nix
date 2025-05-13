@@ -53,6 +53,7 @@
     exfat
     vscode
     direnv
+    distrobox
     progress
     ### START LunarShell deps ###
     figlet

@@ -87,7 +87,6 @@
   home.packages = with pkgs; [
     kate
     kcalc
-    distrobox
     telegram-desktop
     discord
     spotify
