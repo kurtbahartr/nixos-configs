@@ -52,9 +52,10 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 - Pair your Android device through wireless debugging using `adb pair` if you're willing to use USB/wireless debugging.
 - Set up WayDroid and install Inat BOX into it if you're willing to do so. Search for the APK yourself.
 - Visit https://login.tailscale.com/admin/machines/new-linux and generate an install script. Then copy the `sudo tailscale up --auth-key=<key>` part and paste it into your terminal.
-- If your Tailnet has subnet servers, do the following commands:
-  - `sudo tailscale up --accept-routes`
+- If your Tailnet has subnet servers, do the following command and restart Tailscale:
   - `sudo tailscale set --accept-routes`
+- If you want to use an exit node available on your Tailnet, do the following command and restart Tailscale:
+  - `sudo tailscale set --exit-node=<machine-name>`
 
 # Bugs
 
