@@ -42,12 +42,12 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 - Once done, toggle the following settings in Zen Settings:
   - General
     - Tabs
-      - Ctrl+Tab cycles through tabs in recently used order = On
+      - [x] Ctrl+Tab cycles through tabs in recently used order
   - Look and Feel
     - Vertical Tabs
-      - Show New Tab Button on Tab List = On
-        - Show separation border for when the new tab button is at the bottom = On
-        - Move the new tab button to the top = Off
+      - [x] Show New Tab Button on Tab List
+        - [x] Show separation border for when the new tab button is at the bottom
+        - [ ] Move the new tab button to the top
 - `gh auth login` if you use GitHub.
 - Pair your Android device through wireless debugging using `adb pair` if you're willing to use USB/wireless debugging.
 - Set up WayDroid and install Inat BOX into it if you're willing to do so. Search for the APK yourself.
