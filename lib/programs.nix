@@ -50,6 +50,7 @@
     exfat
     vscode
     direnv
+    progress
     ### START LunarShell deps ###
     figlet
     jq
