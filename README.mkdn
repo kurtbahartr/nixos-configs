@@ -35,9 +35,9 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 - Set up distrobox with an Ubuntu container and install Bifrost (search for SamloaderKotlin) into it if you're willing to work with Samsung firmwares.
   - This will be automated when `home-manager` pushes `programs.distrobox` configuration into stable.
 - Set up Zen Browser and install the following extensions for a saner and cleaner Internet experience:
-  - Bring Twitter Back
-  - Proton Pass (also sign into it)
-  - uBlock Origin
+  - Bring Twitter Back: To revert "X" branding, iconography and terminology back to "Twitter" as we're all used to. (The URL is still "x.com", that cannot be tampered with as long as `twitter.com` is valid and redirects to `x.com`.)
+  - Proton Pass (also sign into it): To have a privacy conscious password and passkey manager/provider. It's free to use and there's no limit to how many passwords and passkeys you can store whatsoever.
+  - uBlock Origin: To get rid of ads, common cookie banners and newsletter pop-ups all across the internet, including on YouTube and Medium.
 - Also import the Zen Mods from this repository. This will install:
   - Add new tab urlbar icon v1.0.0
   - Better CtrlTab Panel v1.0.0
