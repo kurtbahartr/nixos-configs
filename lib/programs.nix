@@ -12,6 +12,9 @@
 
     # Install zsh
     zsh.enable = true;
+
+    # Install KDE Connect
+    kdeconnect.enable = true;
   };
 
   fonts = {
