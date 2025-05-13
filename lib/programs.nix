@@ -32,6 +32,7 @@
   # TODO: Migrate some of these to users.users.linda.packages
   environment.systemPackages = with pkgs; [
     efibootmgr
+    unrar
     fastfetch
     wpsoffice
     android-tools
