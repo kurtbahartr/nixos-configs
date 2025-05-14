@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "envycontrol": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1743898620,
+        "narHash": "sha256-FZMkYHUAA3keV7OSqzEIu0k1rdgDS0VP3nPBLBzbaeM=",
+        "owner": "bayasdev",
+        "repo": "envycontrol",
+        "rev": "a65724bfa25fe78408adeea6a5015647b5a826da",
+        "type": "github"
+      },
+      "original": {
+        "owner": "bayasdev",
+        "repo": "envycontrol",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -55,6 +75,7 @@
     },
     "root": {
       "inputs": {
+        "envycontrol": "envycontrol",
         "home-manager": "home-manager",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",

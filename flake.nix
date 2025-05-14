@@ -15,6 +15,11 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # EnvyControl
+    envycontrol = {
+      url = "github:bayasdev/envycontrol";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, nix-flatpak, zen-browser, home-manager, ... }@inputs: {

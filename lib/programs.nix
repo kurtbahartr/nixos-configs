@@ -50,6 +50,7 @@
     # SMB shares as well and remove the entry from here.
     samba
     inputs.zen-browser.packages.${pkgs.system}.default
+    inputs.envycontrol.packages.${pkgs.system}.default
     exfat
     vscode
     direnv
