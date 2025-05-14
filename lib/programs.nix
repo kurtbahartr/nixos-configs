@@ -56,6 +56,7 @@
     direnv
     distrobox
     progress
+    zenity
     ### START LunarShell deps ###
     figlet
     jq
