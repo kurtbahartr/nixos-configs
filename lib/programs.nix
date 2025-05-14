@@ -57,6 +57,7 @@
     distrobox
     progress
     zenity
+    kdePackages.plasma-browser-integration
     ### START LunarShell deps ###
     figlet
     jq
