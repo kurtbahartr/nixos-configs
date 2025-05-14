@@ -96,5 +96,6 @@
     libsForQt5.qt5.qttools
     python312Packages.spyder
     transmission_4-qt6
+    sqlitebrowser
   ];
 }
