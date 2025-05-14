@@ -8,7 +8,7 @@
       "--dpi-desync=fake --dpi-desync-any-protocol --dpi-desync-repeats=6"
       # eduroam - Samsun University
       "--dpi-desync=fake --dpi-desync-ttl=7 --dpi-desync-fake-tls=0x00000000"
-      # Turk Telekom ADSL/VDSL home networks
+      # Turk Telekom ADSL/VDSL and mobile data
       "--hostspell=hoSt"
       "--dpi-desync=fake --dpi-desync-ttl=3"
     ];
