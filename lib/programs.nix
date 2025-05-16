@@ -30,6 +30,7 @@
     direnv
     distrobox
     progress
+    libnotify
     zenity
     kdePackages.plasma-browser-integration
   ];
