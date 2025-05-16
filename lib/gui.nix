@@ -1,3 +1,4 @@
+{ config, pkgs, ...}:
 {
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
@@ -44,9 +45,17 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
-
-  fonts.fontconfig = {
-    enable = true;
-    useEmbeddedBitmaps = true;
+  fonts = {
+    fontconfig = {
+      enable = true;
+      useEmbeddedBitmaps = true;
+    };
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-emoji
+      nerdfonts
+    ];
   };
 }

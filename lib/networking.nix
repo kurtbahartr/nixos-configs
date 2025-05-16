@@ -16,4 +16,9 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  programs = {
+    # Install KDE Connect
+    kdeconnect.enable = true;
+  };
 }

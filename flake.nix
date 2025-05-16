@@ -35,6 +35,7 @@
         ./lib/cups.nix
         ./lib/gui.nix
         ./lib/locale.nix
+        ./lib/lowlevel.nix
         ./lib/networking.nix
         ./lib/nvidia.nix
         ./lib/programs.nix
