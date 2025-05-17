@@ -22,7 +22,8 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 - Modify `lib/nvidia.nix` to reflect your PC's PCI Bus addresses.
   - This can be acquired via `lshw` like so: `sudo nix run 'nixpkgs#lshw' -- -c display`
 - Review the packages and configs. Not everyone is content with my preferences.
-- Place Cider flatpak bundle (`cider-linux-x64.flatpak`) into the `cider/` directory if you're going to install it. Otherwise, comment out the relevant `flatpak install` section in `lib/flatpak.nix`.
+- Place Cider AppImage (`cider-vX.X.X-linux-x64.AppImage`) into the `pkgs/` directory if you're going to install it. Otherwise, comment out the package declaration in `lib/programs.nix`.
+  - If you prefer to install the Flatpak version instead, place the flatpak bundle (`cider-linux-x64.flatpak`) into the `cider/` directory and uncomment the relevant `flatpak install` command in `lib/flatpak.nix`.
 
 # Installation
 

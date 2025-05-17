@@ -36,5 +36,6 @@
     libnotify
     zenity
     kdePackages.plasma-browser-integration
+    (callPackage ../pkgs/cider.nix { })
   ];
 }
