@@ -7,6 +7,8 @@
     ".gitconfig".text = ''
       [core]
       editor = "hx"
+      [color]
+      ui = "auto"
     '';
     ".local/share/fonts/mtextra.ttf".source = ../fonts/mtextra.ttf;
     ".local/share/fonts/symbol.ttf".source = ../fonts/symbol.ttf;
