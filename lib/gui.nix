@@ -49,6 +49,23 @@
     fontconfig = {
       enable = true;
       useEmbeddedBitmaps = true;
+      # Fix emojis in Qt applications and Plasma shell.
+      # https://superuser.com/questions/1800068/notification-box-in-kde-plasma-does-not-display-all-emoji-as-coloured
+      # QTBUG-80434
+      defaultFonts = {
+        serif = [
+          "Noto Sans"
+          "Noto Color Emoji"
+        ];
+        sansSerif = [
+          "Noto Sans"
+          "Noto Color Emoji"
+        ];
+        monospace = [
+          "Noto Sans"
+          "Noto Color Emoji"
+        ];
+      };
     };
     enableDefaultPackages = true;
     packages = with pkgs; [
