@@ -58,11 +58,11 @@
           "Noto Color Emoji"
         ];
         sansSerif = [
-          "Noto Sans"
+          "Noto Serif"
           "Noto Color Emoji"
         ];
         monospace = [
-          "Noto Sans"
+          "Hack Nerd Font Mono"
           "Noto Color Emoji"
         ];
       };
