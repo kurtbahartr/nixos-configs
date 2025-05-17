@@ -2,5 +2,5 @@
 {
   home.sessionVariables = {
     EDITOR = "hx";
-  };  
+  };
 }

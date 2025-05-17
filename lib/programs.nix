@@ -4,7 +4,10 @@
   nixpkgs.config.allowUnfree = true;
 
   # Experimental flags
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Install Steam
   programs.steam.enable = true;

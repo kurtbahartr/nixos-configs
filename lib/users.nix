@@ -4,7 +4,11 @@
   users.users.linda = {
     isNormalUser = true;
     description = "Linda St-Denis";
-    extraGroups = [ "networkmanager" "wheel" "vboxusers" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "vboxusers"
+    ];
     shell = pkgs.zsh;
   };
 }

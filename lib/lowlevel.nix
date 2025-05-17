@@ -17,6 +17,6 @@
     pciutils
     inputs.envycontrol.packages.${pkgs.system}.default
     exfat
-    (callPackage ../pkgs/odin4.nix {})
+    (callPackage ../pkgs/odin4.nix { })
   ];
 }
