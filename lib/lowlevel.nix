@@ -1,9 +1,12 @@
 { pkgs, inputs, ... }:
 {
   # Non-default Filesystems
-  boot.supportedFilesystems = [
-    "ntfs"
-  ];
+  boot = {
+    supportedFilesystems = [
+      "ntfs"
+    ];
+    kernelPackages = pkgs.linuxPackages_latest;
+  };
 
   # KDE Partition Manager
   programs.partition-manager.enable = true;

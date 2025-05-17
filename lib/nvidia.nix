@@ -34,7 +34,15 @@
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    # The stable version available on NixOS repos doesn't work with the latest kernel versions.
+    # An alternative to this workaround could be downgrading to kernel 6.12 or sticking with LTS.
+    package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
+      version = "570.144";
+      sha256_64bit = "sha256-wLjX7PLiC4N2dnS6uP7k0TI9xVWAJ02Ok0Y16JVfO+Y=";
+      openSha256 = "sha256-PATw6u6JjybD2OodqbKrvKdkkCFQPMNPjrVYnAZhK/E=";
+      settingsSha256 = "sha256-VcCa3P/v3tDRzDgaY+hLrQSwswvNhsm93anmOhUymvM=";
+      usePersistenced = false;
+    };
  }; 
 
         hardware.nvidia.prime = {
