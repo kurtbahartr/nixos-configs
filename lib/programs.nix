@@ -9,8 +9,17 @@
     "flakes"
   ];
 
-  # Install Steam
-  programs.steam.enable = true;
+  programs = {
+    # Install Steam
+    steam.enable = true;
+
+    # Install direnv
+    direnv = {
+      enable = true;
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+    };
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -30,7 +39,6 @@
     samba
     inputs.zen-browser.packages.${pkgs.system}.default
     vscode
-    direnv
     distrobox
     progress
     libnotify
