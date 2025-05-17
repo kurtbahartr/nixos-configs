@@ -110,17 +110,23 @@
 
   # Other packages not covered by Home Manager
   home.packages = with pkgs; [
+    # Nice-to-have KDE programs
     kate
     kcalc
+    # General internet
     telegram-desktop
     discord
     spotify
+    transmission_4-qt6
+    # Markdown
     ghostwriter
+    # Programming with Python+Qt5
     python312Packages.notebook
     python312Packages.pyqt5
     libsForQt5.qt5.qttools
     python312Packages.spyder
-    transmission_4-qt6
     sqlitebrowser
+    # halogenOS development
+    git-repo
   ];
 }
