@@ -28,7 +28,7 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 # Installation
 
 - Copy the files to `/etc/nixos`.
-- `sudo nixos-rebuild switch`
+- `sudo nixos-rebuild boot`
 - Reboot.
 
 # Post-install steps
