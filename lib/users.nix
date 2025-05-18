@@ -7,6 +7,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "adbusers"
       "vboxusers"
     ];
     shell = pkgs.zsh;

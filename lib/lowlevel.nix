@@ -8,15 +8,19 @@
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
-  # KDE Partition Manager
-  programs.partition-manager.enable = true;
+  programs = {
+    # KDE Partition Manager
+    partition-manager.enable = true;
+
+    # Android Tools
+    adb.enable = true;
+  };
 
   # smartd service from smartmontools
   services.smartd.enable = true;
 
   environment.systemPackages = with pkgs; [
     efibootmgr
-    android-tools
     pciutils
     nvme-cli
     smartmontools
