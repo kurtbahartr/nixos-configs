@@ -58,7 +58,7 @@
           "Noto Color Emoji"
         ];
         sansSerif = [
-          "Noto Serif"
+          "Noto Sans"
           "Noto Color Emoji"
         ];
         monospace = [
