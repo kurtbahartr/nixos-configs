@@ -6,6 +6,7 @@
       "ntfs"
     ];
     kernelPackages = pkgs.linuxPackages_latest;
+    kernelParams = [ "kvm.enable_virt_at_load=0" ];
   };
 
   programs = {
