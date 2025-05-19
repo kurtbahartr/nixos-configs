@@ -7,11 +7,13 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 - Sane internet browsing
 - Gap-bridged Office experience (to make it easier to migrate from Microsoft 365 suite)
 - Python programming with Qt
+- Android debugging and development (Set up specifically for [halogenOS](https://github.com/halogenOS).)
 - Revamped terminal shell (feat. [LunarShell](https://lunarshell.dev)+zsh)
 
 > Review the configuration files to see which packages are installed and configured.
 
 # Technologies involved
+
 - Nix
 - Nix Flakes
 - Nix Home Manager
