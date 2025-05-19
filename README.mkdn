@@ -42,6 +42,7 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
   - Bring Twitter Back: To revert "X" branding, iconography and terminology back to "Twitter" as we're all used to. (The URL is still "x.com", that cannot be tampered with as long as `twitter.com` is valid and redirects to `x.com`.)
   - Proton Pass (also sign into it): To have a privacy conscious password and passkey manager/provider. It's free to use and there's no limit to how many passwords and passkeys you can store whatsoever.
   - uBlock Origin: To get rid of ads, common cookie banners and newsletter pop-ups all across the internet, including on YouTube and Medium.
+  - Plasma Integration: For native download progress and media controls on KDE Plasma.
 - Also import the Zen Mods in `extra/` directory. View its contents to know what will be installed. It's in JSON format, so removing entries to omit specific Mods is also possible.
 - Once done, toggle the following settings in Zen Settings:
   - General
