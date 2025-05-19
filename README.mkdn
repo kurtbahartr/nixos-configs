@@ -60,7 +60,8 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 - If your Tailnet has subnet servers, do the following command and restart Tailscale:
   - `sudo tailscale set --accept-routes`
 - If you want to use an exit node available on your Tailnet, do the following command and restart Tailscale:
-  - `sudo tailscale set --exit-node=<machine-name>`
+  - `sudo tailscale set --exit-node=<machine-name> --exit-node-allow-lan-access`
+    - `--exit-node-allow-lan-access` parameter is purely optional. Without it, your machine will be completely isolated from your local network.
 
 # Bugs
 
