@@ -15,6 +15,7 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 # Technologies involved
 
 - Nix
+- Nixpkgs
 - Nix Flakes
 - Nix Home Manager
 
