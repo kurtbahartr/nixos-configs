@@ -16,6 +16,15 @@
     ".local/share/fonts/Wingdings.ttf".source = ../fonts/Wingdings.ttf;
     ".local/share/fonts/Wingdings_2.ttf".source = ../fonts/Wingdings_2.ttf;
     ".local/share/fonts/Wingdings_3.ttf".source = ../fonts/Wingdings_3.ttf;
+    ".mozilla/native-messaging-hosts/org.kde.plasma.browser_integration.json".text = ''
+      {
+        "name": "org.kde.plasma.browser_integration",
+        "description": "Native connector for KDE Plasma",
+        "path": "/run/current-system/sw/bin/plasma-browser-integration-host",
+        "type": "stdio",
+        "allowed_extensions": ["plasma-browser-integration@kde.org"]
+      }
+    '';
     ".wallpaper" = {
       source = ../wallpaper.jpg;
       #onChange = "${pkgs.kdePackages.plasma-workspace}/bin/plasma-apply-wallpaperimage ${config.home.homeDirectory}/.wallpaper";
