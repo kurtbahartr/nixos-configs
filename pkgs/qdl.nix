@@ -1,25 +1,29 @@
 {
   lib,
   stdenv,
-  fetchgit,
+  fetchFromGitHub,
   libxml2,
   libusb1,
-  openssh,
+  pkg-config
 }:
 stdenv.mkDerivation rec {
   pname = "qdl";
-  version = "1.0";
+  version = "30ac3a8";
 
-  src = fetchgit {
-    url = "https://github.com/danielkutik/qdl";
-    rev = "v1.0";
-    sha256 = "sha256-WckpMOamZBRmQalHOrrRT0AQB2t4nWwEq5GVno+Rhx8=";
+  src = fetchFromGitHub {
+    owner = "danielkutik";
+    repo = "qdl";
+    rev = "30ac3a8";
+    sha256 = "sha256-5ZV39whIm8qJIBLNdAsR2e8+f0jYjwE9dGNgh6ARPUY=";
   };
+
+  nativeBuildInputs = [
+    pkg-config
+  ];
 
   buildInputs = [
     libxml2
     libusb1
-    openssh
   ];
 
   buildPhase = ''
