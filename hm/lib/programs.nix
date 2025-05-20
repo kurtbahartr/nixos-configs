@@ -127,6 +127,8 @@
     sqlitebrowser
     # halogenOS development
     git-repo
+    # Nice-to-have 3rd parties
+    gimp
     (callPackage ../../pkgs/microsoft-edit.nix { })
   ];
 }
