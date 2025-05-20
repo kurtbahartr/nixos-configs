@@ -49,6 +49,8 @@
         };
       };
     };
+    # OBS Studio
+    obs-studio.enable = true;
     # Tmate
     tmate.enable = true;
     # HyFetch
