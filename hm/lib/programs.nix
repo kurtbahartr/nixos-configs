@@ -108,15 +108,15 @@
   # Other packages not covered by Home Manager
   home.packages = with pkgs; [
     # Nice-to-have KDE programs
-    kate
-    kcalc
+    kdePackages.kate
+    kdePackages.kcalc
     # General internet
     telegram-desktop
     discord
     spotify
     transmission_4-qt6
     # Markdown
-    ghostwriter
+    kdePackages.ghostwriter
     # Programming with Python+Qt5
     python312Packages.notebook
     python312Packages.pyqt5
