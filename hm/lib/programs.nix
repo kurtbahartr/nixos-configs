@@ -128,5 +128,6 @@
     sqlitebrowser
     # halogenOS development
     git-repo
+    (callPackage ../../pkgs/microsoft-edit.nix { })
   ];
 }
