@@ -1,8 +1,5 @@
 { config, pkgs, ... }:
 {
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
   # Program configs covered by Home Manager
   programs = {
     # Let Home Manager install and manage itself.
