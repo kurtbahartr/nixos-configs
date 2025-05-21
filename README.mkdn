@@ -67,3 +67,5 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 # Bugs
 
 - Connecting to external display disconnects the built-in display on modern Nvidia laptops. The solution is logging out and logging back in while the display is connected.
+- KDE asks to unlock KDE Wallet on every login. The password is the same as your login password. A workaround to this could be changing the password of `kdewallet` Wallet to an empty password.
+  - This started happening after switching to Ly display manager.
