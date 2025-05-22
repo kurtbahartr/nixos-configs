@@ -1,8 +1,8 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   home.activation = {
     setPlasmaWallpaper = ''
-      dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
+      ${pkgs.dbus}/bin/dbus-send --session --dest=org.kde.plasmashell --type=method_call /PlasmaShell org.kde.PlasmaShell.evaluateScript 'string:
       var Desktops = desktops();                                                                                                                       
       for (i=0;i<Desktops.length;i++) {
         d = Desktops[i];
