@@ -85,6 +85,7 @@
             "apt -y upgrade"
             "apt -y install /tmp/bifrost.deb"
             "rm /tmp/bifrost.deb"
+            "chsh -s /bin/bash linda"
           ];
         };
         # Pisilinux Docker container doesn't have everything required for Distrobox to consider complete.
