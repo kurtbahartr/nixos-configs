@@ -10,7 +10,7 @@
         d.currentConfigGroup = Array("Wallpaper",
                                     "org.kde.image",
                                     "General");
-        d.writeConfig("Image", "file:///PATH/TO/IMAGE.png");
+        d.writeConfig("Image", "file://${config.home.homeDirectory}/.wallpaper");
       }'
     '';
   };
