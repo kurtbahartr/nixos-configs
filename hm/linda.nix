@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./lib/activation.nix
     ./lib/file.nix
     ./lib/vars.nix
     ./lib/programs.nix
