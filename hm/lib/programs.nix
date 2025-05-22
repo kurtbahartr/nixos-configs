@@ -74,25 +74,25 @@
       ];
     };
     # Distrobox config is available only on unstable channel.
-    #distrobox = {
-    #  enable = true;
-    #  containers = {
-    #    ubuntu = {
-    #      image = "ubuntu:latest";
-    #      init_hooks = [
-    #        "wget -O /tmp/bifrost.deb https://github.com/zacharee/SamloaderKotlin/releases/download/1.20.1/bifrost_1.20.1_amd64.deb"
-    #        "apt update"
-    #        "apt -y upgrade"
-    #        "apt -y install /tmp/bifrost.deb"
-    #        "rm /tmp/bifrost.deb"
-    #      ];
-    #    };
-    #    # Pisilinux Docker container doesn't have everything required for Distrobox to consider complete.
-    #    pisi = {
-    #      image = "docker.io/pisilinux/chroot:latest";
-    #    };
-    #  };
-    #};
+    distrobox = {
+      enable = true;
+      containers = {
+        ubuntu = {
+          image = "ubuntu:latest";
+          init_hooks = [
+            "wget -O /tmp/bifrost.deb https://github.com/zacharee/SamloaderKotlin/releases/download/1.20.1/bifrost_1.20.1_amd64.deb"
+            "apt update"
+            "apt -y upgrade"
+            "apt -y install /tmp/bifrost.deb"
+            "rm /tmp/bifrost.deb"
+          ];
+        };
+        # Pisilinux Docker container doesn't have everything required for Distrobox to consider complete.
+        #pisi = {
+        #  image = "docker.io/pisilinux/chroot:latest";
+        #};
+      };
+    };
   };
 
   # Other packages not covered by Home Manager
