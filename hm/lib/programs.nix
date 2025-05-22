@@ -24,7 +24,7 @@
     helix = {
       enable = true;
       # Diana's Helix configuration
-      # Ported from gitea:dianawa/dotfiles/main/Configs/config/.config/helix/config.toml
+      # Ported from github:dianaw353/dotfiles-v2/main/dot_config/helix/config.toml
       settings = {
         theme = "base16_transparent";
         editor = {
@@ -34,18 +34,6 @@
           color-modes = true;
           soft-wrap.enable = true;
           cursor-shape.insert = "bar";
-        };
-        keys.normal = {
-          esc = [
-            "collapse_selection"
-            "keep_primary_selection"
-          ];
-          C-g = [
-            ":new"
-            ":insert-output lazygit"
-            ":buffer-close!"
-            ":redraw"
-          ];
         };
       };
     };
