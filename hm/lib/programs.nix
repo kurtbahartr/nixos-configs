@@ -80,11 +80,15 @@
         ubuntu = {
           image = "ubuntu:latest";
           init_hooks = [
-            "wget -O /tmp/bifrost.deb https://github.com/zacharee/SamloaderKotlin/releases/download/1.20.1/bifrost_1.20.1_amd64.deb"
-            "apt update"
-            "apt -y upgrade"
-            "apt -y install /tmp/bifrost.deb"
-            "rm /tmp/bifrost.deb"
+            ''
+              if ! apt search bifrost | grep "bifrost/.*installed"; then
+                wget -O /tmp/bifrost.deb https://github.com/zacharee/SamloaderKotlin/releases/download/1.20.1/bifrost_1.20.1_amd64.deb
+                apt update
+                apt -y upgrade
+                apt -y install /tmp/bifrost.deb
+                rm /tmp/bifrost.deb
+              fi
+            ''
             "chsh -s /bin/bash linda"
           ];
         };
