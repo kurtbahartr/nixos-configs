@@ -1,14 +1,11 @@
-{ config, pkgs, ... }:
+{ config, pkgs, systemSettings, ... }:
 {
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
   # Enable Ly display manager
-  services.displayManager.ly = {
-    enable = true;
-    #settings = {};
-  };
+  services.displayManager.${systemSettings.displayManager}.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   services.desktopManager.plasma6.enable = true;
@@ -40,10 +37,7 @@
   ];
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
+  services.xserver.xkb = systemSettings.xkb;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;

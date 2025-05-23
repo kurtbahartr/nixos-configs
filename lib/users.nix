@@ -1,15 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, userSettings, ... }:
 {
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.linda = {
+  users.users.${userSettings.username} = {
     isNormalUser = true;
-    description = "Linda St-Denis";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-      "adbusers"
-      "vboxusers"
-    ];
-    shell = pkgs.zsh;
+    description = userSettings.fullname;
+    extraGroups = userSettings.extraGroups;
+    shell = pkgs.${userSettings.shell};
   };
 }

@@ -1,15 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, userSettings, ... }:
 {
   home.file = {
     ".zshrc".text = ''
       # Created by newuser for 5.9
     '';
-    ".gitconfig".text = ''
-      [core]
-      editor = "hx"
-      [color]
-      ui = "auto"
-    '';
+    ".gitconfig".text = userSettings.git.extraConfig;
     ".local/share/fonts/mtextra.ttf".source = ../fonts/mtextra.ttf;
     ".local/share/fonts/symbol.ttf".source = ../fonts/symbol.ttf;
     ".local/share/fonts/Webdings_Regular.ttf".source = ../fonts/Webdings_Regular.ttf;

@@ -1,3 +1,4 @@
+{ systemSettings, ... }:
 {
   virtualisation = {
     # Distrobox requirements

@@ -1,8 +1,7 @@
 # Used in main configuration file. Used to enable NVIDIA Drivers. Includes OPTIMUS for my laptop.
-{ config, ... }:
+{ systemSettings, config, ... }:
 
 {
-
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
@@ -27,7 +26,7 @@
     # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
     # Only available from driver 515.43.04+
     # Currently alpha-quality/buggy, so false is currently the recommended setting.
-    open = false;
+    open = systemSettings.nvidia.ossDriver;
 
     # Enable the Nvidia settings menu,
     # accessible via `nvidia-settings`.
@@ -36,26 +35,8 @@
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     # The stable version available on NixOS repos doesn't work with the latest kernel versions.
     # An alternative to this workaround could be downgrading to kernel 6.12 or sticking with LTS.
-    package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
-      version = "570.144";
-      sha256_64bit = "sha256-wLjX7PLiC4N2dnS6uP7k0TI9xVWAJ02Ok0Y16JVfO+Y=";
-      openSha256 = "sha256-PATw6u6JjybD2OodqbKrvKdkkCFQPMNPjrVYnAZhK/E=";
-      settingsSha256 = "sha256-VcCa3P/v3tDRzDgaY+hLrQSwswvNhsm93anmOhUymvM=";
-      usePersistenced = false;
-    };
-  };
+    package = config.boot.kernelPackages.nvidiaPackages.${systemSettings.nvidia.driverPkg};
 
-  hardware.nvidia.prime = {
-    offload = {
-      enable = true;
-      enableOffloadCmd = true;
-    };
-    # reverseSync.enable = true;
-    # allowExternalGpu = false;
-    # Make sure to use the correct Bus ID values for your system!
-    intelBusId = "PCI:0:2:0";
-    nvidiaBusId = "PCI:1:0:0";
-    # amdgpuBusId = "PCI:54:0:0"; For AMD GPU
+    prime = systemSettings.nvidia.prime;
   };
-
 }

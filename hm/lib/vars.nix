@@ -1,7 +1,7 @@
-{ config, ... }:
+{ config, userSettings, ... }:
 {
   home.sessionVariables = {
-    EDITOR = "hx";
+    EDITOR = userSettings.editor;
   };
 
   home.shellAliases = {

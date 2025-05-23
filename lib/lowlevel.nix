@@ -1,12 +1,12 @@
-{ pkgs, inputs, ... }:
+{ systemSettings, pkgs, envycontrol, ... }:
 {
   # Non-default Filesystems
   boot = {
     supportedFilesystems = [
       "ntfs"
     ];
-    kernelPackages = pkgs.linuxPackages_latest;
-    kernelParams = [ "kvm.enable_virt_at_load=0" ];
+    kernelPackages = pkgs.${systemSettings.kernelPkg};
+    kernelParams = systemSettings.kernelParams;
   };
 
   programs = {
@@ -25,7 +25,7 @@
     pciutils
     nvme-cli
     smartmontools
-    inputs.envycontrol.packages.${pkgs.system}.default
+    envycontrol.packages.${pkgs.system}.default
     exfatprogs
     (callPackage ../pkgs/odin4.nix { })
     (callPackage ../pkgs/qdl.nix { })

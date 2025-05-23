@@ -1,8 +1,5 @@
-{ pkgs, inputs, ... }:
+{ pkgs, zen-browser, systemSettings, ... }:
 {
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
   # Experimental flags
   nix.settings.experimental-features = [
     "nix-command"
@@ -37,7 +34,7 @@
     # Refer to the relevant NixOS Wiki page if you want to host/access
     # SMB shares as well and remove the entry from here.
     samba
-    inputs.zen-browser.packages.${pkgs.system}.default
+    zen-browser.packages.${pkgs.system}.default
     vscode
     distrobox
     progress
