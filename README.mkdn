@@ -22,12 +22,12 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 # Pre-install steps
 
 - Modify the configs to reflect your hostname in the base install's `configuration.nix`, rebuild and reboot once.
-- Modify `lib/nvidia.nix` to reflect your PC's PCI Bus addresses.
+- Modify the PCI bus addresses in `flake.nix` to reflect your PC's PCI bus addresses.
   - This can be acquired via `lshw` like so: `sudo nix run 'nixpkgs#lshw' -- -c display`
 - Modify the Limine branding in `lib/bootloader.nix` to reflect what you want to be shown as the text on top.
 - Review the packages and configs. Not everyone is content with my preferences.
 - Place Cider AppImage (`cider-vX.X.X-linux-x64.AppImage`) into the `pkgs/` directory if you're going to install it. Otherwise, comment out the package declaration in `lib/programs.nix`.
-  - If you prefer to install the Flatpak version instead, place the flatpak bundle (`cider-linux-x64.flatpak`) into the `cider/` directory and uncomment the relevant `flatpak install` command in `lib/flatpak.nix`.
+  - If you prefer to install the Flatpak version instead, place the flatpak bundle (`cider-linux-x64.flatpak`) into the `cider/` directory and uncomment the relevant service declaration in `lib/flatpak.nix`.
 
 # Installation
 
@@ -37,8 +37,6 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 
 # Post-install steps
 
-- Set up distrobox with an Ubuntu container and install Bifrost (search for SamloaderKotlin) into it if you're willing to work with Samsung firmwares.
-  - This will be automated when `home-manager` pushes `programs.distrobox` configuration into stable.
 - Set up Zen Browser and install the following extensions for a saner and cleaner Internet experience:
   - Bring Twitter Back: To revert "X" branding, iconography and terminology back to "Twitter" as we're all used to. (The URL is still "x.com", that cannot be tampered with as long as `twitter.com` is valid and redirects to `x.com`.)
   - Proton Pass (also sign into it): To have a privacy conscious password and passkey manager/provider. It's free to use and there's no limit to how many passwords and passkeys you can store whatsoever.
@@ -67,5 +65,3 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 # Bugs
 
 - Connecting to external display disconnects the built-in display on modern Nvidia laptops. The solution is logging out and logging back in while the display is connected.
-- KDE asks to unlock KDE Wallet on every login. The password is the same as your login password. A workaround to this could be changing the password of `kdewallet` Wallet to an empty password.
-  - This started happening after switching to Ly display manager.
