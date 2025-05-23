@@ -81,7 +81,7 @@
           };
         };
         # Display manager to use.
-        displayManager = "ly";
+        displayManager = "sddm";
         # X11 keymap configuration
         xkb = {
           layout = "us";
