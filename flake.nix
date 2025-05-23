@@ -1,8 +1,10 @@
 {
   description = "A simple NixOS flake";
   inputs = {
-    # NixOS official package source, using the nixos-24.11 branch here
+    # NixOS official package source, using the nixos-25.05 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    # NixOS Unstable branch
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     # Flatpak for NixOS
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
     # Zen Browser
@@ -26,6 +28,7 @@
     {
       self,
       nixpkgs,
+      nixpkgs-unstable,
       nix-flatpak,
       zen-browser,
       home-manager,
@@ -33,6 +36,8 @@
       ...
     }@inputs:
     let
+      pkgs = nixpkgs.legacyPackages.${systemSettings.architecture};
+      pkgs-unstable = nixpkgs-unstable.legacyPackages.${systemSettings.architecture};
       nixpkgsConfig = {
         nixpkgs.config.allowUnfree = true;
       };
@@ -176,9 +181,10 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.${userSettings.username} = import ./hm/${userSettings.username}.nix;
+            home-manager.users.${userSettings.username} = ./hm/${userSettings.username}.nix;
             home-manager.extraSpecialArgs = {
               inherit inputs;
+              inherit pkgs-unstable;
               inherit systemSettings;
               inherit userSettings;
             };
@@ -188,6 +194,7 @@
           inherit inputs;
           inherit zen-browser;
           inherit envycontrol;
+          inherit pkgs-unstable;
           inherit systemSettings;
           inherit userSettings;
         };
