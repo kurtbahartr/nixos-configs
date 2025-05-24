@@ -46,6 +46,13 @@
       nixpkgsConfig = {
         nixpkgs.config.allowUnfree = true;
       };
+      nitrousConfig = {
+        # Change this to reflect your processor series! The kernel is compiled accordingly!
+        # See lib/linux-nitrous.nix for possible values.
+        customization.linux-nitrous.processorFamily = "alderlake";
+        # Whether to enable Intel Iris Xe graphics.
+        customization.graphics.intel.xe.enable = false;
+      };
       systemSettings = {
         # System architecture. You should probably not touch this.
         architecture = "x86_64-linux";
@@ -55,8 +62,6 @@
         timezone = "Europe/Istanbul";
         # Locale. You probably know this format if you have a good history with Linux.
         locale = "en_CA";
-        # Kernel package to use. You should probably be content with the latest kernel.
-        kernelPkg = "linuxPackages_latest";
         # Kernel parameters. You probably don't want to touch this unless you know what you're doing.
         kernelParams = [
           "kvm.enable_virt_at_load=0"
@@ -166,6 +171,7 @@
       nixosConfigurations.${systemSettings.hostname} = nixpkgs.lib.nixosSystem {
         system = systemSettings.architecture;
         modules = [
+          nixpkgsConfig
           # Import the previous configuration.nix we used,
           # so the old configuration file still takes effect
           ./configuration.nix
@@ -175,6 +181,9 @@
           ./lib/gui.nix
           ./lib/locale.nix
           ./lib/lowlevel.nix
+          nitrousConfig
+          ./lib/linux-nitrous/intel-gpu.nix
+          ./lib/linux-nitrous/config.nix
           ./lib/networking.nix
           ./lib/nvidia.nix
           ./lib/programs.nix
@@ -187,7 +196,6 @@
           nix-flatpak.nixosModules.nix-flatpak
           ./lib/flatpak.nix
           home-manager.nixosModules.home-manager
-          nixpkgsConfig
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
