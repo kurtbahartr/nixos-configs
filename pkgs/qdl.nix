@@ -8,12 +8,12 @@
 }:
 stdenv.mkDerivation rec {
   pname = "qdl";
-  version = "30ac3a8";
+  version = "30ac3a8abcfb0825157185f11e595d0c7562c0df";
 
   src = fetchFromGitHub {
     owner = "danielkutik";
     repo = "qdl";
-    rev = "30ac3a8";
+    rev = "30ac3a8abcfb0825157185f11e595d0c7562c0df";
     sha256 = "sha256-5ZV39whIm8qJIBLNdAsR2e8+f0jYjwE9dGNgh6ARPUY=";
   };
 
