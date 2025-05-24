@@ -23,14 +23,8 @@
   # Install the Hyprland Window Manager.
   programs.hyprland.enable = true;
 
-  # Hyprland config dependencies
-  services = {
-    # Hypridle
-    hypridle.enable = true;
-
-    # playerctl
-    playerctld.enable = true;
-  };
+  # playerctl
+  services.playerctld.enable = true;
 
   environment.systemPackages = with pkgs; [
     adw-gtk3
@@ -39,6 +33,7 @@
     cliphist
     wl-clipboard
     hyprshot
+    hypridle
     kdePackages.qt6ct
     libsForQt5.qt5ct
     wezterm
