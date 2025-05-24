@@ -108,7 +108,8 @@
     kdePackages.kcalc
     # General internet
     telegram-desktop
-    (callPackage ../../pkgs/discord/default.nix { })
+    #(callPackage ../../pkgs/discord/default.nix { })
+    discord
     spotify
     transmission_4-qt6
     # Markdown
