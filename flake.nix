@@ -54,6 +54,9 @@
         customization.graphics.intel.xe.enable = false;
       };
       systemSettings = {
+        # Number of jobs Nix will invoke. Similar to `make -jN` where
+        # N is a value for this variable.
+        rebuildJobs = 4;
         # System architecture. You should probably not touch this.
         architecture = "x86_64-linux";
         # Hostname. Adapt this to your installed system.
@@ -171,6 +174,9 @@
       nixosConfigurations.${systemSettings.hostname} = nixpkgs.lib.nixosSystem {
         system = systemSettings.architecture;
         modules = [
+          {
+            nix.settings.max-jobs = systemSettings.rebuildJobs;
+          }
           nixpkgsConfig
           # Import the previous configuration.nix we used,
           # so the old configuration file still takes effect
