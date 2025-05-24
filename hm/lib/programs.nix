@@ -110,6 +110,7 @@
     telegram-desktop
     #(callPackage ../../pkgs/discord/default.nix { })
     discord
+    signal-desktop
     spotify
     transmission_4-qt6
     # Markdown
