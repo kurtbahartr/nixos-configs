@@ -98,6 +98,7 @@
         #};
       };
     };
+    kodi.enable = true;
   };
 
   # Other packages not covered by Home Manager
