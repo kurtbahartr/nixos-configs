@@ -158,15 +158,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1748035048,
-        "narHash": "sha256-HfBxY8+SRCNZ74Mu3RUT75rlwW5f2OcObqVBRGZR06s=",
-        "owner": "tailscale",
+        "lastModified": 1748114589,
+        "narHash": "sha256-29XKnNhuaWs6FKn8AbAwrR4VetVn4LAd2c/9p2jpEFI=",
+        "owner": "kurtbahartr",
         "repo": "tailscale",
-        "rev": "4a11514db5fc4fe77225cd032f9f76cc8610b9ce",
+        "rev": "47deb7215c2cbaa7fda1f1e20a6ef546143e6acf",
         "type": "github"
       },
       "original": {
-        "owner": "tailscale",
+        "owner": "kurtbahartr",
         "repo": "tailscale",
         "type": "github"
       }

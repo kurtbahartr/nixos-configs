@@ -23,7 +23,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     tailscale = {
-      url = "github:tailscale/tailscale";
+      url = "github:kurtbahartr/tailscale";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
