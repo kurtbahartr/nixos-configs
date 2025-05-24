@@ -55,6 +55,11 @@
         # Kernel parameters. You probably don't want to touch this unless you know what you're doing.
         kernelParams = [
           "kvm.enable_virt_at_load=0"
+          "quiet"
+          "splash"
+          "boot.shell_on_fail"
+          "udev.log_priority=3"
+          "rd.systemd.show_status=auto"
         ];
         # Nameservers to use. The format for each entry is "IP#DoT.hostname".
         dnsNameservers = [

@@ -1,5 +1,15 @@
 { config, pkgs, systemSettings, ... }:
 {
+  # Settings related to plymouth
+  boot.plymouth = {
+    enable = true;
+    theme = "square_hud";
+    themePackages = with pkgs; [
+      (adi1090x-plymouth-themes.override{
+        selected_themes = [ "square_hud" ];
+      })
+    ];
+  };
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
