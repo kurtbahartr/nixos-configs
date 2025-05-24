@@ -51,7 +51,7 @@
         # See lib/linux-nitrous.nix for possible values.
         customization.linux-nitrous.processorFamily = "alderlake";
         # Whether to enable Intel Iris Xe graphics.
-        customization.graphics.intel.xe.enable = false;
+        customization.graphics.intel.xe.enable = true;
       };
       systemSettings = {
         # Number of jobs Nix will invoke. Similar to `make -jN` where
