@@ -22,6 +22,10 @@
       url = "github:kurtbahartr/envycontrol";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    tailscale = {
+      url = "github:tailscale/tailscale";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -33,6 +37,7 @@
       zen-browser,
       home-manager,
       envycontrol,
+      tailscale,
       ...
     }@inputs:
     let
@@ -199,6 +204,7 @@
           inherit inputs;
           inherit zen-browser;
           inherit envycontrol;
+          inherit tailscale;
           inherit pkgs-unstable;
           inherit systemSettings;
           inherit userSettings;
