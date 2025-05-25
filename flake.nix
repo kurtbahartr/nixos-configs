@@ -59,6 +59,8 @@
         rebuildJobs = 4;
         # System architecture. You should probably not touch this.
         architecture = "x86_64-linux";
+        # Bootloader. More extensive configuration can be seen in lib/bootloader.nix.
+        bootloader = "systemd-boot";
         # Hostname. Adapt this to your installed system.
         hostname = "st-denis-g770";
         # Timezone. Format: Region/City
@@ -182,7 +184,8 @@
           # so the old configuration file still takes effect
           ./configuration.nix
           ./hardware-configuration.nix
-          ./lib/bootloader.nix
+          ./lib/bootloader/config.nix
+          ./lib/bootloader/extra.nix
           ./lib/cups.nix
           ./lib/gui.nix
           ./lib/locale.nix
