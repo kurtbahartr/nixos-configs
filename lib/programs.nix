@@ -16,6 +16,9 @@
       enableBashIntegration = true;
       enableZshIntegration = true;
     };
+
+    # Install KClock
+    kclock.enable = true;
   };
 
   # List packages installed in system profile. To search, run:
