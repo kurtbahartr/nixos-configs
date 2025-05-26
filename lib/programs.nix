@@ -38,6 +38,7 @@
     # SMB shares as well and remove the entry from here.
     samba
     zen-browser.packages.${pkgs.system}.default
+    vlc
     vscode
     distrobox
     progress
