@@ -12,9 +12,6 @@
     virtualbox.host = {
       enable = true;
       enableExtensionPack = true;
-      # KVM support requires disabling network interfaces.
-      addNetworkInterface = false;
-      enableKvm = true;
     };
   };
 }
