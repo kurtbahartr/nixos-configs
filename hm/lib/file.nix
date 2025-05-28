@@ -20,10 +20,7 @@
         "allowed_extensions": ["plasma-browser-integration@kde.org"]
       }
     '';
-    ".wallpaper" = {
-      source = ../wallpaper.jpg;
-      #onChange = "${pkgs.kdePackages.plasma-workspace}/bin/plasma-apply-wallpaperimage ${config.home.homeDirectory}/.wallpaper";
-    };
+    ".wallpaper".source = ../wallpaper.png;
     ".config/hypr".source = ../hypr;
     ".config/qt5ct".source = ../qtXct/5;
     ".config/qt6ct".source = ../qtXct/6;
