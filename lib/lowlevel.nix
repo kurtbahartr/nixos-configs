@@ -2,9 +2,9 @@
 {
   # Non-default Filesystems
   boot = {
-    supportedFilesystems = [
-      "ntfs"
-    ];
+    supportedFilesystems = {
+      ntfs = true;
+    };
     kernelParams = systemSettings.kernelParams;
     kernelModules = systemSettings.additionalKernelMods;
     initrd.verbose = false;
