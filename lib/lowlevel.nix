@@ -6,6 +6,7 @@
       "ntfs"
     ];
     kernelParams = systemSettings.kernelParams;
+    kernelModules = systemSettings.additionalKernelMods;
     initrd.verbose = false;
   };
 

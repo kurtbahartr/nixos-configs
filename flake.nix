@@ -76,6 +76,9 @@
           "udev.log_priority=3"
           "rd.systemd.show_status=auto"
         ];
+        additionalKernelMods = [
+          "f2fs"
+        ];
         # Nameservers to use. The format for each entry is "IP#DoT.hostname".
         dnsNameservers = [
           "149.112.121.10#private.canadianshield.cira.ca"
