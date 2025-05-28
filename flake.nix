@@ -46,13 +46,6 @@
       nixpkgsConfig = {
         nixpkgs.config.allowUnfree = true;
       };
-      nitrousConfig = {
-        # Change this to reflect your processor series! The kernel is compiled accordingly!
-        # See lib/linux-nitrous.nix for possible values.
-        customization.linux-nitrous.processorFamily = "alderlake";
-        # Whether to enable Intel Iris Xe graphics.
-        customization.graphics.intel.xe.enable = true;
-      };
       systemSettings = {
         # Number of jobs Nix will invoke. Similar to `make -jN` where
         # N is a value for this variable.
@@ -67,6 +60,8 @@
         timezone = "Europe/Istanbul";
         # Locale. You probably know this format if you have a good history with Linux.
         locale = "en_CA";
+        # Kernel package to use. You should probably be content with the latest kernel.
+        kernelPkg = "linuxPackages_latest";
         # Kernel parameters. You probably don't want to touch this unless you know what you're doing.
         kernelParams = [
           "kvm.enable_virt_at_load=0"
@@ -193,9 +188,6 @@
           ./lib/gui.nix
           ./lib/locale.nix
           ./lib/lowlevel.nix
-          nitrousConfig
-          ./lib/linux-nitrous/intel-gpu.nix
-          ./lib/linux-nitrous/config.nix
           ./lib/networking.nix
           ./lib/nvidia.nix
           ./lib/programs.nix

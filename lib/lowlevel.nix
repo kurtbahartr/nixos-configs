@@ -5,6 +5,7 @@
     supportedFilesystems = {
       ntfs = true;
     };
+    kernelPackages = pkgs.${systemSettings.kernelPkg};
     kernelParams = systemSettings.kernelParams;
     kernelModules = systemSettings.additionalKernelMods;
     initrd.verbose = false;
