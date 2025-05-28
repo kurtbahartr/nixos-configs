@@ -125,6 +125,9 @@
     git-repo
     # Nice-to-have 3rd parties
     gimp
+    xmlstarlet
+    aapt
+    apktool
     (callPackage ../../pkgs/microsoft-edit.nix { })
   ];
 }
