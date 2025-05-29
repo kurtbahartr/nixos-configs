@@ -19,6 +19,9 @@
 
     # Install KClock
     kclock.enable = true;
+
+    # Install virt-manager
+    virt-manager.enable = true;
   };
 
   # List packages installed in system profile. To search, run:

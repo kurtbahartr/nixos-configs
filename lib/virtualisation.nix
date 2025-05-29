@@ -13,5 +13,7 @@
       enable = true;
       enableExtensionPack = true;
     };
+    # libvirtd
+    libvirtd.enable = true;
   };
 }
