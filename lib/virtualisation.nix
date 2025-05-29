@@ -13,6 +13,8 @@
       enable = true;
       enableExtensionPack = true;
     };
+    # VMware
+    vmware.host.enable = true;
     # libvirtd
     libvirtd.enable = true;
   };
