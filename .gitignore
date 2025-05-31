@@ -1,7 +1,3 @@
-# Cider is proprietary and paid. We're against piracy here.
-cider/cider-linux-x64.flatpak
-pkgs/cider-*.AppImage
-
 # result/ directory is machine-specific and should not be included.
 result
 
