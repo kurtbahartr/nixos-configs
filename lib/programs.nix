@@ -28,6 +28,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     unrar
+    p7zip
     fastfetch
     wpsoffice
     python312Full
