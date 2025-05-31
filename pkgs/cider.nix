@@ -1,10 +1,14 @@
-{ pkgs, appimageTools, lib, fetchurl}:
+{ pkgs, appimageTools, lib, requireFile, fetchurl }:
 
 appimageTools.wrapType2 rec {
   pname = "cider";
   version = "3.0.2";
 
-  src = ./cider-v3.0.2-linux-x64.AppImage;
+  src = requireFile {
+    name = "${pname}-v${version}-linux-x64.AppImage";
+    url = "https://cidercollective.itch.io/cider/";
+    sha256 = "1rfraf1r1zmp163kn8qg833qxrxmx1m1hycw8q9hc94d0hr62l2x";
+  };
 
   extraInstallCommands =
     let contents = appimageTools.extract { inherit pname version src; };
