@@ -61,7 +61,7 @@
         # Locale. You probably know this format if you have a good history with Linux.
         locale = "en_CA";
         # Kernel package to use. You should probably be content with the latest kernel.
-        kernelPkg = "linuxPackages_latest";
+        kernelPkg = "linuxPackages_6_13";
         # Kernel parameters. You probably don't want to touch this unless you know what you're doing.
         kernelParams = [
           "kvm.enable_virt_at_load=0"
