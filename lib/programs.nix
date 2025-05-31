@@ -48,6 +48,7 @@
     progress
     libnotify
     zenity
+    killall
     kdePackages.plasma-browser-integration
     (callPackage ../pkgs/cider.nix { })
   ];
