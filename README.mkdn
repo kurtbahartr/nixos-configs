@@ -29,6 +29,7 @@ Configuration files for NixOS. This isn't a part of [linux-configs](https://gith
 - Review the packages and configs. Not everyone is content with my preferences.
 - Place Cider AppImage (`cider-vX.X.X-linux-x64.AppImage`) into the `pkgs/` directory if you're going to install it. Otherwise, comment out the package declaration in `lib/programs.nix`.
   - If you prefer to install the Flatpak version instead, place the flatpak bundle (`cider-linux-x64.flatpak`) into the `cider/` directory and uncomment the relevant service declaration in `lib/flatpak.nix`.
+- Place your custom Waydroid images into the `waydroid/` directory if you're going to use some. Otherwise, set `systemSettings.waydroid.useCustomImages` to `false`.
 
 # Installation
 

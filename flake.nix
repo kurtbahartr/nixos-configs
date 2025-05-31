@@ -110,6 +110,8 @@
           layout = "us";
           variant = "";
         };
+        # Use custom images for Waydroid, located in the waydroid/ folder.
+        waydroid.useCustomImages = true;
         # Configuration for Zapret, a DPI bypass utility for Linux.
         zapret = {
           enable = true;
@@ -195,6 +197,7 @@
           ./lib/tailscale.nix
           ./lib/users.nix
           ./lib/virtualisation.nix
+          ./lib/waydroid-imgs.nix
           ./lib/zapret.nix
           ./lunarshell/install.nix
           nix-flatpak.nixosModules.nix-flatpak
