@@ -7,16 +7,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1743898620,
-        "narHash": "sha256-FZMkYHUAA3keV7OSqzEIu0k1rdgDS0VP3nPBLBzbaeM=",
-        "owner": "bayasdev",
+        "lastModified": 1747766822,
+        "narHash": "sha256-MzhbXCEAJ7fCGwkCFlQyeoG89ez3En1zcsshSxnGnM8=",
+        "owner": "kurtbahartr",
         "repo": "envycontrol",
-        "rev": "a65724bfa25fe78408adeea6a5015647b5a826da",
+        "rev": "7a375fc69e249b82cdc03a83a745387b8e3d5ebb",
         "type": "github"
       },
       "original": {
-        "owner": "bayasdev",
-        "ref": "v3.5.2",
+        "owner": "kurtbahartr",
         "repo": "envycontrol",
         "type": "github"
       }
@@ -159,11 +158,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1748683954,
-        "narHash": "sha256-HCiZtmL4YSzvYt+2YFBFeEJVZ6tZ9Cwv+NzY5PwR0hc=",
+        "lastModified": 1748686636,
+        "narHash": "sha256-06Ma+j2QMmfg+UJz8kZNR0Z5uJiVozFlaOyJs+gyUUQ=",
         "owner": "kurtbahartr",
         "repo": "tailscale",
-        "rev": "c294f39332aff6188af3891d713cfb38c99c1e26",
+        "rev": "4392303b26629079d97a7234f8adeeba0291d4c0",
         "type": "github"
       },
       "original": {

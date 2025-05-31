@@ -19,7 +19,7 @@
     };
     # EnvyControl
     envycontrol = {
-      url = "github:bayasdev/envycontrol/?ref=v3.5.2";
+      url = "github:kurtbahartr/envycontrol";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     tailscale = {
