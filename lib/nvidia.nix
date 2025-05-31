@@ -32,11 +32,6 @@
     # accessible via `nvidia-settings`.
     nvidiaSettings = true;
 
-    # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    # The stable version available on NixOS repos doesn't work with the latest kernel versions.
-    # An alternative to this workaround could be downgrading to kernel 6.12 or sticking with LTS.
-    package = config.boot.kernelPackages.nvidiaPackages.${systemSettings.nvidia.driverPkg};
-
     prime = systemSettings.nvidia.prime;
   };
 }

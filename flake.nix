@@ -86,7 +86,15 @@
           # Open source drivers brick laptops with NVIDIA OPTIMUS. Use with caution.
           ossDriver = false;
           # Driver package to use.
-          driverPkg = "production";
+          driverConfig = { config, ... }: {
+            hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
+              version = "570.144";
+              sha256_64bit = "sha256-wLjX7PLiC4N2dnS6uP7k0TI9xVWAJ02Ok0Y16JVfO+Y=";
+              openSha256 = "sha256-PATw6u6JjybD2OodqbKrvKdkkCFQPMNPjrVYnAZhK/E=";
+              settingsSha256 = "sha256-VcCa3P/v3tDRzDgaY+hLrQSwswvNhsm93anmOhUymvM=";
+              usePersistenced = false;
+            };
+          };
           # Options for PRIME.
           prime = {
             offload = {
@@ -180,6 +188,7 @@
             nix.settings.max-jobs = systemSettings.rebuildJobs;
           }
           nixpkgsConfig
+          systemSettings.nvidia.driverConfig
           # Import the previous configuration.nix we used,
           # so the old configuration file still takes effect
           ./configuration.nix
