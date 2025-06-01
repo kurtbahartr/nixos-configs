@@ -36,6 +36,7 @@
     protonvpn-gui
     wine
     winetricks
+    lutris
     # To provide ntlm_auth to Wine.
     # We won't be hosting an SMB share nor will we access one.
     # Refer to the relevant NixOS Wiki page if you want to host/access
