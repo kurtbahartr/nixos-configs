@@ -21,9 +21,5 @@
       }
     '';
     ".wallpaper".source = ../wallpaper.png;
-    ".config/hypr".source = ../hypr;
-    ".config/qt5ct".source = ../qtXct/5;
-    ".config/qt6ct".source = ../qtXct/6;
-    ".config/wezterm/wezterm.lua".source = ../wezterm/wezterm.lua;
   };
 }

@@ -20,27 +20,6 @@
   # Enable the KDE Plasma Desktop Environment.
   services.desktopManager.plasma6.enable = true;
 
-  # Install the Hyprland Window Manager.
-  programs.hyprland.enable = true;
-
-  # playerctl
-  services.playerctld.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    adw-gtk3
-    brightnessctl
-    xdg-desktop-portal-gtk
-    cliphist
-    wl-clipboard
-    hyprshot
-    hypridle
-    kdePackages.qt6ct
-    libsForQt5.qt5ct
-    wezterm
-    mako
-    wofi
-  ];
-
   # Configure keymap in X11
   services.xserver.xkb = systemSettings.xkb;
 
