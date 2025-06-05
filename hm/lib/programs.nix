@@ -128,6 +128,7 @@
     xmlstarlet
     aapt
     apktool
+    scrcpy
     (callPackage ../../pkgs/microsoft-edit.nix { })
   ];
 }
