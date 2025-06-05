@@ -29,6 +29,8 @@
   environment.systemPackages = with pkgs; [
     unrar
     p7zip
+    lz4
+    zip
     fastfetch
     wpsoffice
     python312Full
