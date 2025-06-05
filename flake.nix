@@ -155,14 +155,6 @@
           fullName = "Bahar KURT";
           # Email to be used by Git in commits
           email = "kurtbahartr@users.noreply.github.com";
-          # Extra configuration not covered by home-manager
-          extraConfig = ''
-            [core]
-            editor = "hx"
-
-            [color]
-            ui = auto
-          '';
         };
         # HyFetch configuration - You can get the values by running the first time setup.
         hyfetch = {
