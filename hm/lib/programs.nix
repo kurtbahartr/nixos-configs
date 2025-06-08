@@ -116,10 +116,10 @@
     # Markdown
     kdePackages.ghostwriter
     # Programming with Python+Qt5
-    python312Packages.notebook
-    python312Packages.pyqt5
+    python313Packages.notebook
+    python313Packages.pyqt5
     libsForQt5.qt5.qttools
-    python312Packages.spyder
+    python313Packages.spyder
     sqlitebrowser
     # halogenOS development
     git-repo

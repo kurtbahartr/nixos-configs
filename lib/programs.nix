@@ -33,7 +33,7 @@
     zip
     fastfetch
     wpsoffice
-    python312Full
+    python313
     prismlauncher
     protonvpn-gui
     wine
