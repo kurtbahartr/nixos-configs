@@ -129,6 +129,7 @@
     aapt
     apktool
     scrcpy
+    file
     (callPackage ../../pkgs/microsoft-edit.nix { })
   ];
 }
